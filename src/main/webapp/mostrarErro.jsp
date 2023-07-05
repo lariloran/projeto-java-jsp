@@ -9,6 +9,6 @@
 </head>
 <body>
     <p>Erro ao realizar operação!</p>   
-    <jsp:include page="listarPessoas.jsp"></jsp:include>  
+    <jsp:include page="listagemDeProgramadores.jsp"></jsp:include>  
 </body>
 </html>

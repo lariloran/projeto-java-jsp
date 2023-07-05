@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
 import classes.Usuario;
@@ -83,4 +84,21 @@ public class UsuarioDAO {
 			return null;
 		} 
 	}
+	
+	public Usuario buscarPorEmailESenha(String email, String senha) {
+	    try {
+	        em = JPAUtil.getEntityManager();
+	        TypedQuery<Usuario> query = em.createQuery("SELECT obj FROM Usuario obj WHERE obj.email = :email AND obj.senha = :senha", Usuario.class);
+	        query.setParameter("email", email);
+	        query.setParameter("senha", senha);
+	        return query.getSingleResult();
+	    } catch (NoResultException e) {
+	        return null;
+	    } catch (RuntimeException e) {
+	        //e.printStackTrace();
+	        return null;
+	    }
+	}
+
+	
 }
