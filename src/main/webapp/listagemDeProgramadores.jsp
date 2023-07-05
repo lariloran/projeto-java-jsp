@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page errorPage="PaginaErro.jsp" %>
+<%@page errorPage="paginaErro.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,7 +16,7 @@
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- Navegação !-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-		<p class="navbar-brand" >Admin Sistema</p>
+		<p class="navbar-brand">Admin Sistema</p>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 		data-target="#navbarInicio" aria-control="navbarInicio" aria-expanded="false" aria-label="Navegação Toggle">
 			<span class="navbar-toggler-icon"></span>
@@ -34,10 +34,10 @@
 						<i class="fa fa-fw fa-dashboard"></i>
 						<span class="nav-link-text">Cadastrar Programador</span>
 					</a>
-					
 				</li>
-								<li class="nav-item" data-toggle="tooltip" data-placement="right">
-					<a class="nav-link" href="listagemDeProgramadores.jsp">
+				
+				<li class="nav-item" data-toggle="tooltip" data-placement="right">
+					<a class="nav-link" href="index.jsp">
 						<i class="fa fa-fw fa-dashboard"></i>
 						<span class="nav-link-text">Listar Programadores</span>
 					</a>
@@ -60,24 +60,16 @@
 		</div>
 	</nav>
 
-		<jsp:useBean id="programadorBean" class="classes.Programador" scope="request"/>
-    	<jsp:setProperty name="programadorBean" property="idFuncionario" param="idFuncionario" />
-		<%
-			if(programadorBean.remover()){
- 		%>
-		    <jsp:include page="listProgramadores.jsp"></jsp:include>
-        <%}else{%>
-			<h1>Erro ao excluir programador!</h1>
-    	<%}%>
+    <jsp:include page="listProgramadores.jsp"></jsp:include>
     		
-		<footer class="sticky-footer">
-			<div class="container">
-				<div class="text-center">
+	<footer class="sticky-footer">
+		<div class="container">
+			<div class="text-center">
 				<small>Copyright @IFRS 2023</small>
-				</div>
 			</div>
-		</footer>
-	
+		</div>
+	</footer>
+
 	
 	<script src="bibliotecas/jquery/jquery.min.js"></script>
 	<script src="bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>

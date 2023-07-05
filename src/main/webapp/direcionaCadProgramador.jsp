@@ -37,7 +37,7 @@
 				</li>
 				
 								<li class="nav-item" data-toggle="tooltip" data-placement="right">
-					<a class="nav-link" href="index.jsp">
+					<a class="nav-link" href="listagemDeProgramadores.jsp">
 						<i class="fa fa-fw fa-dashboard"></i>
 						<span class="nav-link-text">Listar Programadores</span>
 					</a>
